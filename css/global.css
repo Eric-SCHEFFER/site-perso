@@ -1,0 +1,912 @@
+/* Site perso - CV - Eric SCHEFFER - style.css */
+
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Monserrat');
+@import url('https://fonts.googleapis.com/css?family=Nothing+You+Could+Do');
+@import url('https://fonts.googleapis.com/css?family=Material+Icons');
+
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+   background-color: #fafafa;
+   color: #404040;
+   font-family: "Monserrat", "Helvetica", "Liberation Sans", "FreeSans", "sans-serif";
+   margin: 0;
+   padding: 0;
+   overflow-x: hidden;
+   overflow-y: auto;
+}
+
+h1, h2, h3 {
+   font-weight: 500;
+   color: #404040;
+   text-transform: uppercase;
+}
+
+
+hr {
+   padding: 20px 0 20px 0;
+   border: none;
+}
+
+/******** ENTETE  *********/
+
+
+#bandeauEntete {
+   width: 100%;
+   position: relative;
+   background-color: #474747;
+   text-align: center;
+   height: 260px;
+}
+
+#photoEntete {
+   display: inline-block;
+   position: relative;
+   max-width: 196px;
+   bottom: 10px;
+   margin-left: 40px;
+}
+
+#photoEntete img {
+   width: 100%;
+   display: block;
+   bottom: 0;
+   position: relative;
+   border-radius: 50%;
+   border-style: solid;
+   border-width: .6em;
+   border-color: #ffffff;
+}
+
+#prenomNomEntete {
+   font-family: "Quicksand";
+   text-shadow: 2px 2px 1px #404040;
+   color: #FFFFFF;
+   display: inline-block;
+   position: relative;
+   bottom: 80px;
+   left: 60px;
+   font-weight: 700;
+   text-align: left;
+   font-size: 3em;
+   width: 280px;
+}
+
+#blocTitreEntete {
+   display: inline-block;
+   text-align: right;
+   margin-right: 40px;
+   margin-left: 100px;
+   top: 18px;
+   position: relative;
+   font-family: "Quicksand";
+   text-shadow: 2px 2px 1px #404040;
+   color: #FFFFFF;
+}
+
+#titreEntete {
+   position: relative;
+   font-size: 7.7em;
+   font-weight: 500;
+   margin: 0 0 0 0px;
+   color: #0aadff;
+}
+
+#sousTitreEntete {
+   font-size: 5.7em;
+   font-weight: 200;
+   margin: 0;
+   position: relative;
+   bottom: 75px;
+   right: 6px;
+   color: #ff8d30;
+}
+
+#detailTitreEntete {
+   font-size: 4em;
+   font-weight: 500;
+   font-family: "Nothing You Could Do";
+   margin: 0;
+   position: relative;
+   color: #ffffff;
+   bottom: 148px;
+   right: 323px;
+   -ms-transform: rotate(-5deg); /* IE 9 */
+   -webkit-transform: rotate(-5deg); /* Safari 3-8 */
+   transform: rotate(-5deg);
+}
+
+
+/********** MENU ET LIENS **********/
+
+#nav {
+   position: sticky;
+   position: -webkit-sticky;
+   top: -10px;
+   background-color: #e6e6e6;
+   z-index: 1000;
+}
+
+nav ul {
+   display: block;
+   position: relative;
+   width: 100%;
+   margin: auto;
+   padding: 0;
+   text-align: center;
+}
+
+nav li {
+   position: relative;
+   display: inline-block;
+   margin: 0;
+   padding: 0;
+   width: 20%;
+   max-width: 450px;
+   min-width: 240px;
+   height: 85px;
+   margin-right: -4px; /* bug des espaces indésirables (whitespaces) */
+}
+
+a {
+   text-decoration:none;
+}
+
+nav ul a:hover, #contact a:hover{
+   color: #000000;
+}
+
+nav ul a {
+   line-height: 90px; /* Pour centrer verticalement le texte des liens du menu, mettre la même valeur en px que le height du conteneur parent (li) */
+   font-size: 1.7em;
+   text-transform: uppercase;
+   display: block;
+   position: relative;
+   width: 100%;
+   height: 100%;
+   padding: 0;
+   color: #616161;
+}
+
+#contact a {
+   color: #616161;
+}
+
+/* masque les boutons du burger menu qui n'apparaissent qu'à partir de 733px */
+#top, #open, #close {
+   display: none;
+}
+
+/**************** BLOCS CV ***************/
+
+.main {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   align-items: stretch;
+   background-color: #e6e6e6;
+   /*padding: 30px;*/
+   /*margin: 50px;*/
+   /*border-radius: 14px;*/
+}
+
+ul {
+   list-style-type: none;
+}
+
+section.article ul, section.article p {
+   padding-left: 20px; /* Marge honrizontale la barre verticale colorée */
+   padding-top: 20px;
+   margin-top: -20px; /* Compense le décalage (ligne du dessus) */
+}
+
+.article {
+   padding: 30px;
+   margin: 30px 25px 10px 51px;
+   background-color: #fafafa;
+   border-radius: 14px;
+   width: 600px;
+   min-width: 170px;
+}
+
+.gris {
+   color: #9c9c9c;
+   font-style: normal;
+}
+
+.gras {
+   font-weight: bold;
+}
+
+.grisPetitItalic {
+   font-size: .85em;
+   color: #707070;
+   font-style: italic;
+}
+
+/**************** RÉALISATIONS ***************/
+
+
+
+#competences,#experiences {
+   padding-top: 70px; /* ÉVITE DE MASQUER LE TITRE, PAR LE MENU STICKY, QUAND L'ANCRE EST VISITÉE */
+   margin-top: -70px; /* COMPENSE LE DECALAGE DE LA LIGNE AU DESSUS */
+}
+
+#realisations {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   padding-top: 140px; /* ÉVITE DE MASQUER LE TITRE, PAR LE MENU STICKY, QUAND L'ANCRE EST VISITÉE */
+   margin-top: -140px; /* COMPENSE LE DECALAGE DE LA LIGNE AU DESSUS */
+}
+
+#realisations a {
+   position: relative;
+   display: block;
+   max-width: 200px;
+}
+
+#realisations img {
+   width: 100%;
+   border-radius: 8px;
+   border: 3px solid transparent;
+   transition-property: border;
+   transition-timing-function: ease;
+   transition-duration: .4s;
+}
+
+#realisations #blueAngesls a:hover img,
+#realisations #tattookozak a:hover img {
+   border: 3px solid #404040;
+}
+
+/*
+#realisations h3 {
+}
+*/
+
+.miniature {
+   margin: 15px;
+}
+
+#realisations .titre {
+   position: relative;
+   right: 0;
+   bottom: 0;
+   padding: 2px 2px 2px 2px;
+   margin: 0;
+   border-radius: 8px;
+   text-align: center;
+   text-transform: uppercase;
+   /*text-shadow: 2px 2px 1px #2e2e2e;*/
+}
+
+
+/*
+#realisations #blueAngesls a:hover .titre,
+#realisations #flyer1 a:hover .titre,
+#realisations #flyer2 a:hover .titre,
+#realisations #flyer3 a:hover .titre {
+
+}
+
+*/
+
+
+
+
+
+/**************** DÉCO HARMONISÉE LIENS MENU, TITRES ET CONTENUS SECTIONS ***************/
+
+#navAccueil::before {
+   content: "";
+   border: solid 4px #6ba8ed;
+   border-radius: 14px;
+   margin-right: 8px;
+}
+
+#navCompetences::before {
+   content: "";
+   border: solid 4px #ff4b1f;
+   border-radius: 14px;
+   margin-right: 8px;
+}
+
+#navCompetences::before,
+#competences h2::before {
+   content: "";
+   border: solid 4px #ff4b1f;
+   border-radius: 14px;
+   margin-right: 8px;
+}
+
+#competences ul {
+   border-left: 8px solid #ff4b1f;
+}
+
+#navParcours::before,
+#bloc2 h2::before,
+#bloc3 h2::before,
+#bloc4 h2::before {
+   content: "";
+   border: solid 4px #69367a;
+   border-radius: 14px;
+   margin-right: 8px;
+}
+
+#bloc2 ul,
+#bloc3 ul,
+#bloc4 ul {
+   border-left: 8px solid #69367a;
+}
+
+#navRealisations::before,
+.h2Realisations::before {
+   content: "";
+   border: solid 4px #f0cd22;
+   border-radius: 14px;
+   margin-right: 8px;
+}
+
+
+#navContact::before,
+#contact h2::before {
+   content: "";
+   border: solid 4px #85ed6b;
+   border-radius: 14px;
+   margin-right: 8px;
+}
+
+
+/**************** CONTACT - COORDONNÉES - FORM ***************/
+
+#contact {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   align-items: stretch;
+   background-color: #e6e6e6;
+   padding: 50px 0 50px 0;
+   /*border: solid 1px blue;*/
+}
+
+#coordonnees {
+   display: block;
+   width: 320px;
+}
+
+#coordonnees h2 {
+   margin-left: 40px;
+}
+
+
+#coordonnees li.gras {
+   text-transform: uppercase;
+}
+
+#coordonnees, form {
+   /*border: solid 1px blue;*/
+   padding: 20px;
+   margin: 20px;
+}
+
+form {
+   display: grid;
+   width: 670px;
+}
+
+form label {
+   color: #858585;
+   margin-top:4px;
+}
+
+form input[type=email],
+form input[type=text],
+form input[type=tel],
+form textarea {
+   background-color: #fafafa;
+   border-style: solid;
+   border-radius: 8px;
+}
+
+form input[type=email],
+form input[type=text],
+form input[type=tel] {
+   height: 40px;
+}
+
+form #nom,
+form #tel,
+form #email,
+form #objet {
+   margin-top: 20px;
+   padding: 0 10px 0 10px;
+   font-size: 1.1em;
+   font-weight: bold;
+   color: #707070;
+}
+
+form #message {
+   margin-top: 20px;
+   min-height: 100px;
+   padding: 10px;
+   font-size: 1.3em;
+   color: #4d4d4d;
+}
+
+form #nom:focus,
+form #tel:focus,
+form #email:focus,
+form #objet:focus,
+form #message:focus {
+   border: solid 2px #979797;
+}
+
+form input[type=submit] {
+   margin-top: 20px;
+   width: 150px;
+   height: 40px;
+   font-size: 1.1em;
+   font-weight: bold;
+   color: #4d4d4d;;
+   text-transform: uppercase;
+   border-radius: 8px;
+}
+
+.bouton {
+   background-color: #007bff;
+   color: #ffffff !important;
+   cursor: pointer;
+}
+
+.bouton:hover {
+   background-color: #005ec2;
+}
+
+/* FOND SEMI-OPAQUE BOITE MODALE */
+#masqueOpaquereceptionFormulaire {
+   display: none;
+   position: fixed;
+   top:0; right:0; bottom:0; left:0;
+   background-color: rgba(0, 0, 0, 0.5);
+   z-index: 10000;
+}
+
+/* BOITE MODALE */
+#masqueOpaquereceptionFormulaire #bloc_message {
+   font-weight: bold;
+   background-color: white;
+   position: relative;
+   margin: 10% auto;
+   padding: 0 20px 20px 20px;
+   width: 70%;
+   max-width: 500px;
+   border-radius: 10px;
+   border: 20px solid #ddd;
+   box-shadow: 0px 0px 20px #000;
+}
+
+#masqueOpaquereceptionFormulaire #bloc_message h3 {
+   font-weight: bold;
+}
+
+#masqueOpaquereceptionFormulaire #bloc_message h3::after {
+   position: relative;
+   content: "\2713";
+   color: #1cc92e;
+   font-size: 2.5em;
+   top: 7px;
+   left: 5px;
+}
+
+#masqueOpaquereceptionFormulaire a {
+   position: absolute;
+   display: block;
+   font-weight: bold;
+   font-size: 2em;
+   top: 10px;
+   right: 10px;
+}
+
+#masqueOpaquereceptionFormulaire:target {
+   display: none;
+}
+
+
+.error {
+   color: rgb(255, 0, 0);
+}
+
+/**************** FOOTER ***************/
+
+footer {
+   background-color: #474747;
+   height: 200px;
+}
+
+
+
+/**************** ÉCRANS MOYENS-GRANDS ***************/
+
+@media screen and (max-width: 1405px) {
+
+   /******** ENTETE  *********/
+
+   #bandeauEntete {
+      height: 215px;
+   }
+
+   #photoEntete {
+      width: 160px;
+      bottom: 27px;
+   }
+
+   #photoEntete img {
+      border-width: .48em;
+   }
+
+   #prenomNomEntete {
+      font-size: 2.5em;
+      max-width: 200px;
+   }
+
+   #blocTitreEntete {
+      top: 3px;
+   }
+
+   #titreEntete {
+      font-size: 7em;
+   }
+
+   #sousTitreEntete {
+      font-size: 5.2em;
+      bottom: 70px;
+   }
+
+   #detailTitreEntete {
+      font-size: 3.5em;
+      right: 310px;
+      bottom: 135px;
+   }
+}
+
+
+
+/***************** ÉCRANS MOYENS-PETITS *****************/
+
+@media screen and (max-width: 1224px) {
+
+   /******** ENTETE  *********/
+
+   #bandeauEntete {
+      height: 180px;
+   }
+
+   #photoEntete {
+      width: 130px;
+      bottom: 35px;
+   }
+
+   #photoEntete img {
+      border-width: .4em;
+   }
+
+   #prenomNomEntete {
+      font-size: 1.7em;
+      max-width: 100px;
+      left: 40px;
+   }
+
+   #blocTitreEntete {
+      margin-top: 5px;
+   }
+
+   #titreEntete {
+      font-size: 6.2em;
+   }
+
+   #sousTitreEntete {
+      font-size: 4.4em;
+      bottom: 58px;
+      right: 10px;
+   }
+
+   #detailTitreEntete {
+      font-size: 3.2em;
+      right: 270px;
+      bottom: 115px;
+   }
+
+   /********** MENU **********/
+
+   nav li {
+      max-width: 350px;
+      min-width: 160px;
+      height: 70px;
+   }
+
+   nav ul a {
+      font-size: 1.5em;
+      line-height: 80px;
+   }
+}
+
+/****************** ÉCRANS PETITS *****************/
+
+@media screen and (max-width: 1017px) {
+
+   /******** ENTETE  *********/
+
+   #bandeauEntete {
+      height: 170px;
+   }
+
+   #photoEntete {
+      width: 130px;
+      top: 15px;
+      margin-left: 10px;
+   }
+
+   #photoEntete img {
+      border-width: .35em;
+   }
+
+   #prenomNomEntete {
+      font-size: 1.4em;
+      max-width: 100px;
+      bottom: 40px;
+      left: 25px;
+   }
+
+   #blocTitreEntete {
+      position: relative;
+      top: 21px;
+      margin-left: 50px;
+   }
+
+   #titreEntete {
+      font-size: 4em;
+   }
+
+   #sousTitreEntete {
+      font-size: 2.9em;
+      bottom: 38px;
+      right: 4px;
+   }
+
+   #detailTitreEntete {
+      font-size: 2.1em;
+      right: 174px;
+      bottom: 72px;
+   }
+
+
+   /********** MENU **********/
+
+   nav li {
+      max-width: 350px;
+      min-width: 140px;
+   }
+
+   nav ul a {
+      font-size: 1em;
+      line-height: 80px;
+   }
+}
+
+
+/****************** ÉCRANS TRÈS PETITS ******************/
+
+@media screen and (max-width: 733px) {
+
+   /******** ENTETE  *********/
+
+   #bandeauEntete {
+      height: auto;
+      position: relative;
+   }
+
+   #photoEntete {
+      width: 130px;
+      top: 4px;
+   }
+
+   #photoEntete img {
+      border-width: .35em;
+   }
+
+   #prenomNomEntete {
+      font-size: 1.3em;
+      max-width: 100px;
+      bottom: 50px;
+   }
+
+   #blocTitreEntete {
+      position: relative;
+   }
+
+   #titreEntete {
+      font-size: 3.1em;
+   }
+
+   #sousTitreEntete {
+      font-size: 2.2em;
+      bottom: 26px;
+      right: 4px;
+   }
+
+   #detailTitreEntete {
+      font-size: 1.7em;
+      right: 130px;
+      bottom: 50px;
+   }
+
+
+   /********** MENU BURGER **********/
+
+   #nav {
+      position: sticky;
+      top: 0;
+      display: block;
+      left: 0;
+      transition: transform .4s cubic-bezier(.25, .1, .25, 1);
+   }
+
+   /* flèche go to the top */
+   #top {
+      display: block;
+      position: absolute;
+      z-index: 1000;
+      left: 240px;
+      font-family: "material icons";
+      color: #ff8d30;
+      font-size: 3.2em;
+   }
+
+   /* Boutons ouvrir et fermer le burger menu */
+   #open, #close {
+      display: block;
+      position: absolute;
+      z-index: 1000;
+      top: 50px;
+      left: 240px;
+      font-family: "material icons";
+      color: #ff8d30;
+      font-size: 3.2em;
+   }
+
+   #top a, #open a, #close a {
+      color: #a3a3a3;
+   }
+
+   #top a:hover, #open a:hover {
+      color: #595959;
+   }
+
+   #close a:hover {
+      color: #ffffff;
+   }
+
+   #nav:target {
+      transform: translate(0, 0);
+      opacity: .9;
+   }
+
+   #nav:not(:target) {
+      transform: translate(-360px, 0);
+   }
+
+   #nav:not(:target) #top, #open {
+      left: 360px;
+   }
+
+   #nav:target #top, #nav:target #open, #nav:not(:target) #close {
+      display: none;
+   }
+
+   #nav:target #close {
+      top: 0;
+   }
+
+   /********** MENU **********/
+
+   nav ul {
+
+      text-align: left;
+      left: 0px;
+      margin: 0;
+      width: 100%;
+      max-width: 300px;
+      position: absolute;
+      display: block;
+      background-color: #2b2b2b;
+      overflow-x: auto;
+      max-height: 100vh;
+      border-radius: 0 15px 15px 0;
+   }
+
+   nav li {
+      max-width: 280px;
+      display: block;
+      width: 100%;
+      right: 0;
+      margin-right: 0px;
+   }
+
+   nav ul a {
+      color: #b5b5b5;
+      line-height: 60px;
+      padding-left: 10px;
+      text-align: left;
+      width: auto;
+      font-size: 1.4em;
+   }
+
+   nav ul a:hover {
+      color: #ffffff;
+   }
+}
+
+
+
+/****************** SMARTPHONES ******************/
+
+@media screen and (max-width: 647px) {
+
+   /* Mets des points de suspension si le titre dépasse */
+   h2 {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow : ellipsis;
+      font-size: 1.4em;
+   }
+
+   /******** ENTETE  *********/
+
+   #bandeauEntete {
+      display: block;
+      height: 280px;
+   }
+
+   #photoEntete {
+      display: inline-block;
+      margin: auto;
+      right: 8px;
+   }
+
+   #prenomNomEntete {
+      display: block;
+      max-width: 170px;
+      bottom: -7px;
+      margin: auto;
+      text-align: center;
+      left: 0;
+   }
+
+   #blocTitreEntete {
+      display: inline-block;
+      margin: auto;
+      top: 8px;
+   }
+
+   #titreEntete {
+      font-size: 3.2em;
+   }
+
+   #sousTitreEntete {
+      font-size: 2.4em;
+   }
+
+   #detailTitreEntete {
+      font-size: 1.65em;
+      right: 139px;
+      bottom: 56px;
+   }
+}

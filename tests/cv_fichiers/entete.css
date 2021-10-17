@@ -1,0 +1,157 @@
+.header-wrapper {
+   min-height: var(--header-min-height);
+   background-color: var(--header-footer-bg);
+   padding: 30px 60px;
+   position: relative;
+   color: var(--header-footer-font-color);
+}
+
+.bloc-header-haut {
+   display: flex;
+   /* border: solid violet 1px; */
+   position: relative;
+   flex-wrap: wrap;
+}
+
+.bloc-header-haut a {
+   color: white;
+}
+
+.photo-et-noms {
+   display: flex;
+   align-items: center;
+   position: relative;
+   z-index: 110;
+}
+
+.photo {
+   width: 10.5vw;
+   height: 10.5vw;
+   max-width: 190px;
+   max-height: 190px;
+}
+
+.photo img {
+   width: 100%;
+   height: 100%;
+   border: solid 5px rgb(255, 255, 255);
+   border-radius: 50%;
+}
+
+.nom-et-prenom {
+   /* border: 1px yellow solid; */
+   padding: 0 40px;
+   font-size: 1.8em;
+   position: relative;
+   text-transform: uppercase;
+}
+
+.titres {
+   /* border: solid green 1px; */
+   margin: auto;
+   position: relative;
+   font-size: 1vw;
+   top: 32px;
+}
+
+.titre {
+   position: relative;
+   font-size: 3em;
+   /* border: solid rgb(128, 0, 0) 1px; */
+}
+
+.titre h1 {
+   font-weight: 300;
+}
+
+
+.sous-titre {
+   font-size: 1.9em;
+   position: relative;
+   color: var(--header-sous-titre);
+   float: right;
+   left: 0em;
+   top: -1.3em;
+}
+
+.sous-titre h1 {
+   font-weight: 500;
+}
+
+
+/* Grand écrans */
+@media screen and (min-width: 2000px) {
+   .titres {
+      font-size: 1.3em;
+   }
+}
+
+/* Écrans moyens */
+@media screen and (max-width: 1300px) {
+   .photo {
+      width: 138px;
+      height: 138px;
+   }
+
+   .header-wrapper {
+      padding-bottom: 0;
+   }
+}
+
+/* Petits écrans */
+@media screen and (max-width: 960px) {
+   .bloc-header-haut {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .photo-et-noms {
+      padding-bottom: 40px;
+   }
+
+   .titres {
+      /* font-size: .46em; */
+      font-size: 1.7vw;
+      top: initial;
+   }
+}
+
+/* Tous petits écrans */
+@media screen and (max-width: 540px) {
+
+   .photo-et-noms {
+      flex-direction: column;
+      padding-bottom: 30px;
+      width: 100%;
+   }
+
+   .nom-et-prenom {
+      display: flex;
+      justify-content: center;
+      padding-top: 30px;
+      padding-bottom: 0;
+      padding-left: 0;
+      padding-right: 0;
+      font-size: 1.2em;
+      width: 100%;
+      left: 5px;
+   }
+
+   .nom,
+   .prenom {
+      padding: 0 6px;
+   }
+
+   .header-wrapper {
+      padding-left: 0;
+      padding-right: 0;
+   }
+}
+
+/* Écrans nanos */
+@media screen and (max-width: 300px) {
+   .titres {
+      font-size: .32em;
+   }
+
+}
