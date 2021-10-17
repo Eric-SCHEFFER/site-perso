@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   // ======= RECAPTCHA GOOGLE =======  
   //  Teste si le recapcha est validé par google 
-  $keysecret = '6LdE2dQUAAAAADs0yArRtvvrwl8r_3z1LETX2o23';
+  $keysecret = 'blablabla';
   if (empty($_POST['g-recaptcha-response'])) {
     $captchaErr = "Captcha vide";
     exit;
